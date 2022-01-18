@@ -18,6 +18,7 @@ import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { Header } from "../../components/Header/index";
 import { Pagination } from "../../components/Pagination/index";
 import { Sidebar } from "../../components/Sidebar/index";
+import Link from "next/link";
 
 export default function Userlist() {
   const isWideVersion = useBreakpointValue({
@@ -34,16 +35,18 @@ export default function Userlist() {
           <Flex mb="8" justify={"space-between"} align={"center"}>
             <Heading size="lg" fontWeight={"normal"}>Usuários</Heading>
 
-            <Button
-              as="a"
-              size="sm"
-              fontSize={"sm"}
-              colorScheme={"pink"}
-              leftIcon={<Icon as={RiAddLine} fontSize={"20"}/>}
-              cursor={"pointer"}
-            >
-              Ciar novo
-            </Button>
+            <Link href={"/users/create"} passHref>
+              <Button
+                as="a"
+                size="sm"
+                fontSize={"sm"}
+                colorScheme={"pink"}
+                leftIcon={<Icon as={RiAddLine} fontSize={"20"} />}
+                cursor={"pointer"}
+              >
+                Ciar novo
+              </Button>
+            </Link>
           </Flex>
 
           <Table colorScheme={"whiteAlpha"}>
