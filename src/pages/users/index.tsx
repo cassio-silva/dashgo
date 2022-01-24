@@ -44,7 +44,7 @@ export default function Userlist() {
                 leftIcon={<Icon as={RiAddLine} fontSize={"20"} />}
                 cursor={"pointer"}
               >
-                Ciar novo
+                Criar novo
               </Button>
             </Link>
           </Flex>
