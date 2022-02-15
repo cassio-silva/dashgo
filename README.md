@@ -1,6 +1,6 @@
 # Data syncing
 
-## Fake Api - Mirage Js
+## Fake Api - Mirage Js e Faker
 
 A tipagem `<Partial<T>>` indica que o model precisa conter todos os campos em `<T>`, mas não somente eles.
 
@@ -41,7 +41,7 @@ As `factories` preparam modelos de dados fictícios para serem gerados de forma 
 
 O React Query faz chamadas pra API e automaticamente armazena a resposta em cache, outra função interessante é a de revalidação _on focus_, ou seja sempre que a página receber foco, o React Query realiza uma nova chamada para atualizar os dados, esses recursos são customizáveis e podem ser desabilitados.
 
-### - Exemplo
+Exemplo:
 
 ```javascript
 const { data, isLoading, error } = useQuery('users', async () => {
