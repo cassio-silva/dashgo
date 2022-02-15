@@ -19,12 +19,19 @@ import { Header } from "../../components/Header/index";
 import { Pagination } from "../../components/Pagination/index";
 import { Sidebar } from "../../components/Sidebar/index";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Userlist() {
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true
   })
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/users')
+      .then(response => response.json())
+      .then(data => console.log(data));
+  }, [])
 
   return (
     <Box>
