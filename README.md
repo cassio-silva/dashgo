@@ -17,8 +17,6 @@ A tipagem `<Partial<T>>` indica que o model precisa conter todos os campos em `<
 
 As `factories` preparam modelos de dados fictícios para serem gerados de forma automática pelo faker, e as `seeds` criam uma lista com o modelo da factory recebido.
 
-<details><summary>Exemplo</summary>
-
 ```javascript
 
   factories: {
@@ -40,7 +38,5 @@ As `factories` preparam modelos de dados fictícios para serem gerados de forma 
   },
 
 ```
-
-</details>
 
 ## React Query
