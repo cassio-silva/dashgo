@@ -4,7 +4,7 @@ import faker from "faker";
 type User = {
   name: string;
   email: string;
-  create_at: string;
+  created_At: string;
 } // A tipagem dos dados foi criado como colunas num banco de dados, por isso o camelCase não foi utilizado
 
 export function makeServer() {
@@ -21,14 +21,14 @@ export function makeServer() {
         email() {
           return faker.internet.email().toLocaleLowerCase();
         },
-        createAt() {
+        createdAt() {
           return faker.date.recent(10);
         }
       })
     },
 
     seeds(server) {
-      server.createList('user', 200);
+      server.createList('user', 10);
     },
 
     routes() {
